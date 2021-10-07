@@ -20,7 +20,7 @@ public class alpha {
                 double totalRainfall = 0;
                 int currentMonth = 1;
                 int count = 0;
-                Reader in = new FileReader("src/Copperlode.csv");
+                Reader in = new FileReader("src/CopperlodeTEST.csv");
                 Iterable<CSVRecord> records = CSVFormat.DEFAULT
                         .withHeader("code", "station", "year", "month", "day", "rainfall", "period", "quality")
                         .withSkipHeaderRecord().parse(in);
@@ -43,7 +43,7 @@ public class alpha {
                     if (currentMonth != month){
                         System.out.println("Current Month" + " "+ currentMonth);
                         System.out.println("Total Rain" + " "+ totalRainfall);
-                        System.out.println("Current Year" + " "+ year);
+                        System.out.println("Current Year" + " " + year + "\n");
                         currentMonth = month;
                         totalRainfall = 0;
                     }
